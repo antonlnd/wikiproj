@@ -42,8 +42,8 @@ let Page = db.define('page', {
             }
         },
         hooks: {
-            beforeValidate: function(page, options) {
-                urlTitle = generateUrlTitle(this.title);
+            beforeValidate: (page, options) => {
+                page.urlTitle = generateUrlTitle(page.title);
             }    
         }
     })

@@ -35,7 +35,7 @@ app.use('/', (err, req, res, next) => {
 
 models.db.sync()
 .then( () => {
-    app.listen(3000, () => {
+    app.listen(3001, () => {
         console.log("We\'re listening!");
     });
 })
